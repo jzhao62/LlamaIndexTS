@@ -163,6 +163,7 @@ export class OpenAI extends ToolCallLLM<OpenAIAdditionalChatOptions> {
   additionalSessionOptions?:
     | undefined
     | Omit<Partial<OpenAIClientOptions>, "apiKey" | "maxRetries" | "timeout">;
+  dangerouslyAllowBrowser?: boolean;
 
   // use lazy here to avoid check OPENAI_API_KEY immediately
   lazySession: () => Promise<LLMInstance>;
@@ -192,6 +193,7 @@ export class OpenAI extends ToolCallLLM<OpenAIAdditionalChatOptions> {
     this.additionalSessionOptions = init?.additionalSessionOptions;
     this.apiKey =
       init?.session?.apiKey ?? init?.apiKey ?? getEnv("OPENAI_API_KEY");
+    this.dangerouslyAllowBrowser = init?.dangerouslyAllowBrowser ?? false;
 
     if (init?.azure || shouldUseAzure()) {
       const azureConfig = {
@@ -222,6 +224,7 @@ export class OpenAI extends ToolCallLLM<OpenAIAdditionalChatOptions> {
             maxRetries: this.maxRetries,
             timeout: this.timeout!,
             ...this.additionalSessionOptions,
+            dangerouslyAllowBrowser: !!this.dangerouslyAllowBrowser,
           });
         });
     }
