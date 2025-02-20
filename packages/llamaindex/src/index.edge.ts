@@ -32,7 +32,6 @@ export {
   DEFAULT_CONTEXT_WINDOW,
   DEFAULT_DOC_STORE_PERSIST_FILENAME,
   DEFAULT_GRAPH_STORE_PERSIST_FILENAME,
-  DEFAULT_IMAGE_VECTOR_NAMESPACE,
   DEFAULT_INDEX_STORE_PERSIST_FILENAME,
   DEFAULT_NAMESPACE,
   DEFAULT_NUM_OUTPUTS,
@@ -83,7 +82,6 @@ export * from "./OutputParser.js";
 export * from "./postprocessors/index.js";
 export * from "./QuestionGenerator.js";
 export * from "./selectors/index.js";
-export * from "./ServiceContext.js";
 export * from "./storage/StorageContext.js";
 export * from "./tools/index.js";
 export * from "./types.js";

@@ -1,6 +1,6 @@
 {
   "name": "llamaindex",
-  "version": "0.8.37",
+  "version": "0.9.1",
   "license": "MIT",
   "type": "module",
   "keywords": [
@@ -20,35 +20,11 @@
     "llamaindex"
   ],
   "dependencies": {
-    "@llamaindex/anthropic": "workspace:*",
-    "@llamaindex/clip": "workspace:*",
     "@llamaindex/cloud": "workspace:*",
     "@llamaindex/core": "workspace:*",
-    "@llamaindex/deepinfra": "workspace:*",
     "@llamaindex/env": "workspace:*",
-    "@llamaindex/groq": "workspace:*",
-    "@llamaindex/huggingface": "workspace:*",
     "@llamaindex/node-parser": "workspace:*",
-    "@llamaindex/ollama": "workspace:*",
     "@llamaindex/openai": "workspace:*",
-    "@llamaindex/portkey-ai": "workspace:*",
-    "@llamaindex/readers": "workspace:*",
-    "@llamaindex/replicate": "workspace:*",
-    "@llamaindex/vllm": "workspace:*",
-    "@llamaindex/postgres": "workspace:*",
-    "@llamaindex/azure": "workspace:*",
-    "@llamaindex/astra": "workspace:*",
-    "@llamaindex/milvus": "workspace:*",
-    "@llamaindex/chroma": "workspace:*",
-    "@llamaindex/mongodb": "workspace:*",
-    "@llamaindex/pinecone": "workspace:*",
-    "@llamaindex/qdrant": "workspace:*",
-    "@llamaindex/upstash": "workspace:*",
-    "@llamaindex/weaviate": "workspace:*",
-    "@llamaindex/google": "workspace:*",
-    "@llamaindex/mistral": "workspace:*",
-    "@llamaindex/mixedbread": "workspace:*",
-    "@llamaindex/cohere": "workspace:*",
     "@types/lodash": "^4.17.7",
     "@types/node": "^22.9.0",
     "ajv": "^8.17.1",
@@ -101,28 +77,9 @@
         "default": "./dist/cjs/next.js"
       }
     },
-    "./register": "./register.js",
     "./internal/*": {
       "import": "./dist/not-allow.js",
       "require": "./dist/cjs/not-allow.js"
-    },
-    "./readers/SimpleDirectoryReader": {
-      "workerd": {
-        "types": "./dist/type/readers/SimpleDirectoryReader.edge.d.ts",
-        "default": "./dist/readers/SimpleDirectoryReader.edge.js"
-      },
-      "edge-light": {
-        "types": "./dist/type/readers/SimpleDirectoryReader.edge.d.ts",
-        "default": "./dist/readers/SimpleDirectoryReader.edge.js"
-      },
-      "import": {
-        "types": "./dist/type/readers/SimpleDirectoryReader.d.ts",
-        "default": "./dist/readers/SimpleDirectoryReader.js"
-      },
-      "require": {
-        "types": "./dist/type/readers/SimpleDirectoryReader.d.ts",
-        "default": "./dist/cjs/readers/SimpleDirectoryReader.js"
-      }
     },
     "./*": {
       "import": {
@@ -136,7 +93,6 @@
     }
   },
   "files": [
-    "./register.js",
     "dist",
     "CHANGELOG.md",
     "examples",
@@ -144,7 +100,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/run-llama/LlamaIndexTS.git",
+    "url": "git+https://github.com/run-llama/LlamaIndexTS.git",
     "directory": "packages/llamaindex"
   },
   "scripts": {

@@ -1,5 +1,35 @@
 # llamaindex
 
+## 0.9.1
+
+### Patch Changes
+
+- 6d37d44: fix: Update react agent to support tool calls from Cohere command-r models
+- Updated dependencies [cc50c9c]
+  - @llamaindex/env@0.1.28
+  - @llamaindex/cloud@3.0.1
+  - @llamaindex/core@0.5.1
+  - @llamaindex/node-parser@1.0.1
+  - @llamaindex/openai@0.1.53
+
+## 0.9.0
+
+### Minor Changes
+
+- 6a4a737: Remove re-exports from llamaindex main package
+- b490376: Remove deprecated ServiceContext
+- f4588bc: Remove readers package from llamaindex
+
+### Patch Changes
+
+- d924c63: feat: asChatEngine function for index
+- Updated dependencies [6a4a737]
+- Updated dependencies [d924c63]
+  - @llamaindex/core@0.5.0
+  - @llamaindex/cloud@3.0.0
+  - @llamaindex/node-parser@1.0.0
+  - @llamaindex/openai@0.1.52
+
 ## 0.8.37
 
 ### Patch Changes
